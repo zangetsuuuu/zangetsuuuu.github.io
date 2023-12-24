@@ -1,0 +1,103 @@
+:root {
+    --blackColor: #101010;
+    --whiteColor: #ffffff;
+    --grayColor: #929292;
+    --blackHover: #3a3a3a;
+    --grayBorder: #ccc;
+}
+
+/* Responsive */
+@media screen and (max-width: 825px) {
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .toggle-burger .line-1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .toggle-burger .line-2 {
+        opacity: 0;
+    }
+
+    .toggle-burger .line-3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .nav-menu {
+        position: fixed;
+        width: 50%;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        flex-direction: column;
+        background: rgb(248, 214, 214);
+        background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(240,240,240,1) 35%, rgba(224,224,224,1) 100%);
+        border-left: 1px solid var(--grayBorder);
+        z-index: 9;
+        transform: translateX(100%);
+        transition: .25s ease-in-out;
+    }
+
+    .nav-menu ul {
+        height: 100vh;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .nav-active {
+        transform: translateX(0);
+    }
+
+    .nav-title {
+        margin-left: 30px;
+    }
+
+    .portfolio-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main {
+        grid-template-columns: 1fr;
+        height: fit-content;
+        margin-top: 20px;
+    }
+
+    .hero-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        order: -1;
+        margin-bottom: 20px;
+    }
+    
+    .hero-img img {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+    
+    .hero-content {
+        margin: 0 30px;
+    }
+
+    .hero-content h3 {
+        font-size: 18px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content .fill-btn {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .hero-content .outline-btn {
+        width: 100%;
+    }
+}

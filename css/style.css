@@ -8,6 +8,10 @@
     --grayBorder: #ccc;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -20,16 +24,6 @@ body {
     background: rgb(255,255,255);
     background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(240,240,240,1) 35%, rgba(224,224,224,1) 100%);
     background-size: cover;
-    /* height: 100vh; */
-    scroll-behavior: smooth;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .portfolio-container {
-        flex-direction: column;
-        align-items: center;
-    }
 }
 
 /* Main Container */
@@ -111,6 +105,23 @@ body {
 
 .navbar ul li a:hover::before {
     width: 100%;
+}
+
+/* Burger */
+.burger div {
+    width: 24px;
+    height: 2px;
+    background-color: var(--blackColor);
+    margin: 6px;
+    transition: all 0.3s;
+    z-index: 999;
+}
+
+.burger {
+    display: none;
+    z-index: 999;
+    position: fixed;
+    right: 30px;
 }
 
 /* Hero */
@@ -270,7 +281,6 @@ body {
     transition: opacity 0.3s;
 }
 
-
 .portfolio-card:hover .card-overlay {
     opacity: 1;
 }
@@ -286,14 +296,16 @@ body {
 
 .card-content a {
     font-weight: 500;
+    color: #0000FF;
     transition: .2s ease-in-out;
 }
 
 .card-content a:hover {
     color: var(--blackColor);
+    text-decoration: underline;
 }
 
-.card-content .fa-arrow-right {
+.card-content .fa-image {
     margin-left: 8px;
     margin-top: 40px;
 }
@@ -303,3 +315,26 @@ body {
     margin-left: 8px;
 }
 
+/* Footer section */
+footer {
+    padding: 64px 0;
+    background: var(--whiteColor);
+    text-align: center;
+}
+
+.footer-icons {
+    margin-bottom: 16px;
+}
+
+.footer-icons a {
+    margin: 0 8px;
+}
+
+.footer-icons a svg {
+    fill: var(--blackColor);
+    transition: .2s ease-in-out;
+}
+
+.footer-icons a svg:hover {
+    fill: var(--blackHover);
+}
