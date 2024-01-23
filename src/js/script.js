@@ -19,3 +19,10 @@ hamburger.addEventListener('click', function () {
     navMenu.classList.toggle('hidden');
     navMenu.classList.toggle('menu-open');
 });
+
+// Form
+window.onbeforeunload = () => {
+    for (const form of document.getElementsByTagName("form")) {
+        form.reset()
+    }
+};
